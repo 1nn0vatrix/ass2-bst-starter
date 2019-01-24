@@ -20,11 +20,11 @@ echo "*** Compiling"
 g++ -std=c++14 -Wall -Wextra -Wno-sign-compare *.cpp -g -o myprogram.exe
 
 echo "*** cpplint"
-cpplint *.cpp *.h *.hpp
+cpplint *.cpp *.hpp
 
 echo "*** cppcheck"
 # cppcheck in CSS Linux Lab only knows about c++11
-cppcheck --enable=all --force --inconclusive --language=c++ --std=c++11 --suppress=missingIncludeSystem *.cpp *.h *.hpp
+cppcheck --enable=all --force --inconclusive --language=c++ --std=c++11 --suppress=missingIncludeSystem *.cpp *.hpp
 
 echo "*** running"
 ./myprogram.exe
